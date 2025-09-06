@@ -1,4 +1,9 @@
-What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+LIVE PAGE: https://ahmadzubayer.github.io/Emergency-Hotline-Service/
+
+Questions/Answers
+
+1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
 Ans: 
 
 Differences between getElementById, getElementsByClassName, and querySelector / querySelectorAll are stated below:
@@ -8,9 +13,12 @@ querySelector: Returns the first element that matches the given selector.
 querySelectorAll(): return a nodelist containing a collection of multiple HTML element that matches the given selector. 
 
 
+************************************************************************************************************************************************************************
 
-How do you create and insert a new element into the DOM?
+2. How do you create and insert a new element into the DOM?
+
 Ans:
+
 To create and insert a new element into DOM,
 1. Firstly use document.getElementbyID() to the element for which a new element will be created. 
 2. Then use addEventListener() to it. 
@@ -19,8 +27,12 @@ To create and insert a new element into DOM,
 5. Insert the necessary classes and innerHTML,
 6. Finally, use appendChild() to add the newly created element to the main file. 
 
-What is Event Bubbling and how does it work?
+************************************************************************************************************************************************************************
+
+3. What is Event Bubbling and how does it work?
+
 Ans:
+
 When some element is clicked on a HTML content inside the browser, the target element is not clicked instantly. Rather when clicked, the signal starts from the top of the elements and keeps going to the root until the target is found. When found it triggers the target and then keep bubbling or toggling back to all the upper elements. This process is called event bubbling. 
 
 For example: If we want to press a list item in a webpage, First the click signal travels like this: Window -> Document -> <html> -> body -> section -> ol -> li (target). 
@@ -28,9 +40,12 @@ Then it bubbles back to  all these element in reverse and come to the top.
 li -> ol -> section -> body -> html -> document -> window.
 As a result when "li" is clicked, all the other outer elements are also being clicked on indirectly. 
 
+************************************************************************************************************************************************************************
 
-What is Event Delegation in JavaScript? Why is it useful?
+4. What is Event Delegation in JavaScript? Why is it useful?
+
 Ans:
+
 Event delegation is a process in which the eventListener() is added to the parent of the target instead of the target element itself. Event Bubbling enables event delegation because when a target is found inside the DOM, the click signal propagates back to the parent and ancestors. 
 
 This technique is useful because,
@@ -38,8 +53,12 @@ This technique is useful because,
 2. Code can be kept simpler and shorter. 
 3. If new elements are added after DOM is loaded, they can automatically inherit the eventListener()s of their parent, which increases dynamic stability. 
 
-What is the difference between preventDefault() and stopPropagation() methods?
+************************************************************************************************************************************************************************
+
+5. What is the difference between preventDefault() and stopPropagation() methods?
+
 Ans: 
+
 preventDefault(): This method is used to prevent the browser from performing the default behavior of a element when it is pressed. 
 For example: Normally clicking the submit button automatically reloads the webpage. Using preventDefault() inside the eventListener() function, prevent the browser from reloading. 
 
