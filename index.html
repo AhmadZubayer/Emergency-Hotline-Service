@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Hotline Service</title>
-    <!-- Google Fonts - Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <!-- daisy ui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <!-- tailwind cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!--Font Awesome Cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Hotline Service</title>
+<!-- Google Fonts - Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!-- daisy ui cdn -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<!-- tailwind cdn -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!--Font Awesome Cdn-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./style/responsive.css">
 </head>
 
 <body class="font-['Inter'] bg-[#f5fff6]">
     <header>
 
         <!--Nav Bar Starts Here-->
-        <nav class="max-h-[100px] flex justify-between items-center px-[60px] mt-4 mb-4 bg-white">
+        <nav
+            class="flex flex-col md:flex-row justify-between items-center px-4 md:px-[60px] mt-4 mb-4 bg-white py-4 md:py-2 gap-4 md:gap-0">
             <div class="left flex gap-4 items-center">
                 <img class="h-[50px] w-[50px]" src="./assets/logo.png" alt="">
                 <p class="text-[20px] font-black h-[50px] flex flex-col justify-center leading-tight text-green-800">
                     Emergency <br> Service</p>
             </div>
-            <div class="right flex gap-5 items-center">
-                <div class="flex h-[48px] w-[106px] gap-2 bg-[#41FF6B] rounded-[50px] items-center justify-center">
-                    <p id="life-count" class="text-[24px] font-semibold">0</p>
-                    <img src="./assets/heart.png" alt="" class="dash h-[30px]">
-                </div>
-                <div class="flex h-[48px] w-[106px] gap-2 bg-[#41FF6B] rounded-[50px] items-center justify-center">
-                    <p id="coin-count" class="text-[24px] font-semibold">0</p>
-                    <img src="./assets/coin.png" alt="" class="dash h-[30px]">
+            <div class="right flex gap-2 md:gap-5 items-center">
+                <div
+                    class="flex h-[40px] md:h-[48px] w-[80px] md:w-[106px] gap-1 md:gap-2 bg-[#41FF6B] rounded-[50px] items-center justify-center">
+                    <p id="life-count" class="text-[18px] md:text-[24px] font-semibold">0</p>
+                    <img src="./assets/heart.png" alt="" class="dash h-[24px] md:h-[30px]">
                 </div>
                 <div
-                    class="flex h-[48px] w-[106px] gap-2 bg-[#00A63E] rounded-[50px] items-center justify-center text-white font-medium">
-                    <p id="copy-count" class="text-[20px] ">0</p>
-                    <p class="text-[20px] ">Copy</p>
+                    class="flex h-[40px] md:h-[48px] w-[80px] md:w-[106px] gap-1 md:gap-2 bg-[#41FF6B] rounded-[50px] items-center justify-center">
+                    <p id="coin-count" class="text-[18px] md:text-[24px] font-semibold">0</p>
+                    <img src="./assets/coin.png" alt="" class="dash h-[24px] md:h-[30px]">
+                </div>
+                <div
+                    class="flex h-[40px] md:h-[48px] w-[80px] md:w-[106px] gap-1 md:gap-2 bg-[#00A63E] rounded-[50px] items-center justify-center text-white font-medium">
+                    <p id="copy-count" class="text-[16px] md:text-[20px]">0</p>
+                    <p class="text-[16px] md:text-[20px] hidden sm:block">Copy</p>
                 </div>
             </div>
         </nav>
@@ -49,17 +52,19 @@
 
         <!--Banner Section Starts Here-->
         <section
-            class="banner h-[240px]  flex flex-col items-center justify-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white">
-            <img class="mb-[11px] h-[92px] w-[92px]" src="./assets/logo-dark.png" alt="">
-            <p class="mb-[11px] text-[40px] font-bold">Emergency Service Directory</p>
-            <p class="mb-[11px] font-medium">Government Emergency Services at Your Fingertip – A Project by Government
-                of the People’s Republic of Bangladesh</p>
+            class="banner w-full h-[240px] flex flex-row md:flex-col items-center justify-between md:justify-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white px-4">
+            <div class="text-content text-left md:text-center order-1 md:order-2">
+                <p class="mb-2 md:mb-[11px] text-[24px] md:text-[40px] font-bold">Emergency Service Directory</p>
+                <p class="mb-0 md:mb-[11px] font-medium text-sm md:text-base">Government Emergency Services at Your Fingertip – A Project by Government
+                    of the People’s Republic of Bangladesh</p>
+            </div>
+            <img class="h-[70px] w-[70px] md:h-[92px] md:w-[92px] order-2 md:order-1" src="./assets/logo-dark.png" alt="">
         </section>
     </header>
 
-    <section class="mainBody flex gap-6 ">
+    <section class="mainBody flex flex-col md:flex-row gap-6 px-4 md:px-0">
 
-        <section class="servicesContainer mt-4 p-6 grid grid-cols-3 gap-[30px] w-[1370px]">
+        <section class="servicesContainer mt-4 p-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[30px] w-full">
 
             <div class="serviceCard w-[437px] h-[340px] p-6 bg-white rounded-md shadow-lg">
                 <div class="flex justify-between mb-[16px]">
